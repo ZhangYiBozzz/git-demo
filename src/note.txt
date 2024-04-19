@@ -8,4 +8,4 @@ git remote -v
 查看本地仓库的中央参会仓库列表
 
 git remote rm [key]
-删除指定名称为key的中央仓库地址
+删除指定名称为key的中央仓库地址dadadadadadadadada
