@@ -1,0 +1,11 @@
+git init 
+本地目录初始化为一个本地仓库
+给本地仓库添加一个中央仓库
+git remote add [key] [value]
+key表示在本地给中央仓库地址（value）起一个别名（origin）用的很多 所以默认大家都以origin作为中央仓库的名称
+
+git remote -v
+查看本地仓库的中央参会仓库列表
+
+git remote rm [key]
+删除指定名称为key的中央仓库地址
