@@ -81,4 +81,28 @@ type T14 = {
 let t12: T12;
 let t13: T13;
 let t14: T14;
+
+// 交叉
+type T15 = { a: number; b: string };
+type T16 = { c: boolean };
+// 对象a和b在交叉的过程中，如果A和B中对属性不重叠，则组成一个新的
+// 如果存在重叠属性 则将属性重新重叠交叉
+type T17 = T15 & T16;
+
+let t17: T17 = {
+  a: 1,
+  b: "",
+  c: false,
+};
+
+type T18 = T15 | T16;
+let t18: T18 = {
+  a: 1,
+  c: false,
+};
+// 如何给对象类型添加成员
+
+// 在使用interface和type定义对象类型时，需要合并属性
+// type 使用&交叉类型
+// interface 同名自动合并 不同命 使用extends手动继承
 export default {};
