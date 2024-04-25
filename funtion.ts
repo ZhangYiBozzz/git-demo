@@ -201,4 +201,31 @@ getValue({ a: 1, b: 2, c: 3 } as const, "a");
 getValue({ a: 1, b: 2, c: 3 } as const, "b");
 getValue({ a: 1, b: 2, c: 3 } as const, "c");
 
-bar1("a=1&b=2");
+// bar1("a=1&b=2");
+
+type zhang<T> = {
+  [P in keyof T]?: T[P];
+};
+
+interface Todo {
+  title: string;
+  description: string;
+}
+
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
+  return { ...todo, ...fieldsToUpdate };
+}
+
+const todo1 = {
+  title: "好好哈",
+  description: "覃总",
+};
+
+// {
+//   title?: string | undefined;
+//   description?: string | undefined;
+// }
+
+// const todo2 = updateTodo(todo1, {
+//   description: "Learn TypeScript Enum",
+// });
